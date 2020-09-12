@@ -3,6 +3,8 @@
     "module": "esnext",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
   }
 }
