@@ -1,10 +1,10 @@
 {
-  "name": "cyntler.com",
-  "version": "0.0.1",
+  "name": "personal-frontend",
+  "version": "1.0.0",
   "description": "My personal website.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open --hot",
+    "start": "webpack serve --open --hot",
     "build": "webpack --mode production --progress --hide-modules",
     "test": "jest",
     "types": "tsc --noEmit",
@@ -12,40 +12,35 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyntl3r/cyntler.com.git"
+    "url": "git+https://github.com/cyntler/personal-frontend.git"
   },
-  "author": "cyntl3r",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cyntl3r/cyntler.com/issues"
-  },
-  "homepage": "https://github.com/cyntl3r/cyntler.com#readme",
+  "author": "cyntler",
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/preset-typescript": "^7.10.4",
-    "@testing-library/react": "^11.0.2",
-    "@types/jest": "^26.0.13",
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
-    "babel-loader": "^8.1.0",
-    "eslint": "^7.7.0",
-    "eslint-plugin-react": "^7.20.6",
-    "html-webpack-plugin": "^4.3.0",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@testing-library/react": "^11.2.2",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.17.0",
+    "eslint-plugin-react": "^7.22.0",
+    "html-webpack-plugin": "^4.5.1",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^4.0.0-beta.0"
   },
   "dependencies": {
-    "@types/react": "^16.9.47",
-    "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/styled-components": "^5.1.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
   }
 }
