@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { render, hydrate } from 'react-dom';
 import { GlobalStyle } from './style';
 import { App } from './components/App/App';
 
-const appElement = document.querySelector('div');
+const renderer = (element: ReactElement) => {
+  const appElement = document.querySelector('div');
+  if (appElement.hasChildNodes()) {
+    hydrate(element, appElement);
+  } else {
+    render(element, appElement);
+  }
+};
 
-const renderApp = (
+renderer(
   <>
     <GlobalStyle />
     <App />
   </>
 );
-
-if (appElement.hasChildNodes()) {
-  hydrate(renderApp, appElement);
-} else {
-  render(renderApp, appElement);
-}
