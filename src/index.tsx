@@ -1,20 +1,23 @@
-import React, { ReactElement } from 'react';
-import { render, hydrate } from 'react-dom';
-import { GlobalStyle } from './style';
+/**
+ * @name personal-frontend
+ * @author cyntler <damian@cyntler.com>
+ */
+import { GlobalStyles } from './globalStyles';
 import { App } from './components/App/App';
+import { renderer } from './renderer';
 
-const renderer = (element: ReactElement) => {
-  const appElement = document.querySelector('div');
-  if (appElement.hasChildNodes()) {
-    hydrate(element, appElement);
-  } else {
-    render(element, appElement);
-  }
-};
+const appElement = document.querySelector('main');
 
 renderer(
   <>
-    <GlobalStyle />
+    <GlobalStyles />
     <App />
-  </>
+  </>,
+  appElement
 );
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    appElement.classList.add('loaded');
+  }, 200);
+});
