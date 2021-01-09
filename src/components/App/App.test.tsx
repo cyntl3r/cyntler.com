@@ -3,7 +3,7 @@
  * @author cyntler <damian@cyntler.com>
  */
 import React from 'react';
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import { App } from './App';
 
 afterEach(() => {
@@ -11,6 +11,6 @@ afterEach(() => {
 });
 
 test('is wrapper', () => {
-  render(<App />);
-  expect(screen.getByText('cyntler.com')).toBeDefined();
+  const { getByText } = render(<App />);
+  expect(getByText('personal-frontend')).toBeDefined();
 });
