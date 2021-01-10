@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  target: 'web',
   entry: './src/index.tsx',
   output: {
     path: join(__dirname, '/dist'),
