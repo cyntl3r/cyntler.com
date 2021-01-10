@@ -3,8 +3,16 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent } from 'react';
-import { Wrapper } from './App.styles';
+import { Route, Switch } from 'react-router-dom';
+import { NotFound } from '../NotFound/NotFound';
 
 export const App: FunctionComponent = () => (
-  <Wrapper>personal-frontend</Wrapper>
+  <Switch>
+    <Route exact path="/">
+      <div>demo</div>
+    </Route>
+    <Route>
+      <NotFound />
+    </Route>
+  </Switch>
 );
