@@ -6,19 +6,22 @@ import { GlobalStyles } from './globalStyles';
 import { App } from './components/App/App';
 import { renderer } from './renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { StrictMode, Suspense } from 'react';
 
 const appElement = document.querySelector('main');
 
 renderer(
-  <Router>
-    <GlobalStyles />
-    <App />
-  </Router>,
+  <StrictMode>
+    <Suspense fallback={<div />}>
+      <Router>
+        <GlobalStyles />
+        <App />
+      </Router>
+    </Suspense>
+  </StrictMode>,
   appElement
 );
 
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    appElement.classList.add('loaded');
-  }, 200);
+  appElement.classList.add('loaded');
 });

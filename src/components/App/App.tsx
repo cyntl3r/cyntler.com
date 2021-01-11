@@ -4,12 +4,15 @@
  */
 import { FunctionComponent } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { NotFound } from '../NotFound/NotFound';
+import { lazyImport } from '../../utils/lazyImport';
+
+const Home = lazyImport('Home');
+const NotFound = lazyImport('NotFound');
 
 export const App: FunctionComponent = () => (
   <Switch>
     <Route exact path="/">
-      <div>demo</div>
+      <Home />
     </Route>
     <Route>
       <NotFound />
