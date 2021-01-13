@@ -10,12 +10,14 @@ const Home = lazyImport('Home');
 const NotFound = lazyImport('NotFound');
 
 export const App: FunctionComponent = () => (
-  <Switch>
-    <Route exact path="/">
-      <Home />
-    </Route>
-    <Route>
-      <NotFound />
-    </Route>
-  </Switch>
+  <>
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route>
+        <NotFound />
+      </Route>
+    </Switch>
+  </>
 );
