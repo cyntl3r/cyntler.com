@@ -1,6 +1,7 @@
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const DotenvPlugin = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -29,9 +30,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      inject: 'body',
     }),
     new CopyPlugin({
       patterns: [{ from: join(__dirname, 'public'), to: '.' }],
     }),
+    new DotenvPlugin(),
   ],
 };
