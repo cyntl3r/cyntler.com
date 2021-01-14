@@ -5,19 +5,24 @@
 import { FunctionComponent } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { lazyImport } from '../../utils/lazyImport';
+import { Sidebar } from '../Sidebar/Sidebar';
+import { Content } from '../Content/Content';
 
 const Home = lazyImport('Home');
 const NotFound = lazyImport('NotFound');
 
 export const App: FunctionComponent = () => (
   <>
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route>
-        <NotFound />
-      </Route>
-    </Switch>
+    <Sidebar />
+    <Content>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
+    </Content>
   </>
 );
