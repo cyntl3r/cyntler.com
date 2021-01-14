@@ -9,7 +9,7 @@ export const useTitle = (title: string) => {
 
   useEffect(() => {
     previousTitle.current = document.title;
-    document.title = title;
+    document.title = `${process.env.APP_TITLE}, ${title}`;
     return () => {
       document.title = previousTitle.current;
     };
