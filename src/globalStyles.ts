@@ -15,9 +15,14 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     background-color: #ffffff;
     font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
   }
 
   main {
