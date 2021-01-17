@@ -5,10 +5,34 @@ import {
   useMemo,
   useState,
 } from 'react';
-import { locales, getInitialLocale } from '../utils/locales';
+import { LOCALE_STORAGE_KEY } from '../constants';
+import en from '../locales/en.json';
+import pl from '../locales/pl.json';
 
-export const LocaleContext = createContext(undefined);
+export type LocaleContextType = {
+  locales: string[];
+  currentLocale: string;
+  localeMessages: { [key: string]: string };
+  setLocale: (locale: string) => void;
+};
+
+export const LocaleContext = createContext<LocaleContextType>(undefined);
 const { Provider } = LocaleContext;
+
+const locales = {
+  en,
+  pl,
+};
+
+const getLocaleKeys = () => Object.keys(locales);
+
+export const getInitialLocale = () => {
+  const localStorageLocale = localStorage.getItem(LOCALE_STORAGE_KEY);
+  if (localStorageLocale) {
+    return localStorageLocale;
+  }
+  return getLocaleKeys()[0];
+};
 
 export interface LocaleContextProviderProps {
   children: ReactNode;
@@ -19,19 +43,22 @@ export const LocaleContextProvider: FunctionComponent<LocaleContextProviderProps
 }) => {
   const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
 
-  const messages = useMemo(() => locales[currentLocale], [currentLocale]);
+  const localeMessages = useMemo(
+    () => (currentLocale in locales ? locales[currentLocale] : {}),
+    [currentLocale]
+  );
 
   const setLocale = (locale: string) => {
     setCurrentLocale(locale);
-    localStorage.setItem('locale', locale);
+    localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   };
 
   return (
     <Provider
       value={{
-        locales: Object.keys(locales),
+        locales: getLocaleKeys(),
         currentLocale,
-        messages,
+        localeMessages,
         setLocale,
       }}
     >
