@@ -2,12 +2,14 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
+import { StrictMode } from 'react';
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './globalStyles';
 import { App } from './components/App/App';
 import { renderer } from './renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { StrictMode } from 'react';
 import { LocaleContextProvider } from './contexts/localeContext';
+import { theme } from './theme';
 
 const appElement = document.querySelector('main');
 
@@ -15,8 +17,10 @@ renderer(
   <StrictMode>
     <LocaleContextProvider>
       <Router>
-        <GlobalStyles />
-        <App />
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <App />
+        </ThemeProvider>
       </Router>
     </LocaleContextProvider>
   </StrictMode>,

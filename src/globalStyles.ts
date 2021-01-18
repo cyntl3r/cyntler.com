@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme?.colors?.white};
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
   }
