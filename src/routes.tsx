@@ -7,6 +7,8 @@ import { lazyImport } from './utils/lazyImport';
 const Home = lazyImport('Home');
 const Projects = lazyImport('Projects');
 const Blog = lazyImport('Blog');
+const About = lazyImport('About');
+const Resume = lazyImport('Resume');
 const NotFound = lazyImport('NotFound');
 
 export const routes = [
@@ -35,14 +37,14 @@ export const routes = [
     name: 'about',
     path: '/about',
     exact: false,
-    children: <Blog />,
+    children: <About />,
     isNavigationDisplay: true,
   },
   {
     name: 'resume',
     path: '/resume',
     exact: false,
-    children: <Blog />,
+    children: <Resume />,
     isNavigationDisplay: true,
   },
   {
