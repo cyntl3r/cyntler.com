@@ -6,7 +6,7 @@ import { lazy } from 'react';
 
 export const lazyImport = (name: string) =>
   lazy(() =>
-    import(`../pages/${name}/${name}`).then((module) => ({
+    import(`../components/Pages/${name}/${name}`).then((module) => ({
       default: module[name],
     }))
   );

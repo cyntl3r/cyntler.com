@@ -3,7 +3,7 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent } from 'react';
-import { useTitle } from '../../hooks/useTitle';
+import { useTitle } from '../../../hooks/useTitle';
 import { Wrapper, Status } from './NotFound.styles';
 
 export const NotFound: FunctionComponent = () => {
