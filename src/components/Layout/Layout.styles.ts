@@ -2,7 +2,7 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -22,16 +22,21 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme?.colors?.white};
     font-family: 'Lato', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   main {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
+
     &.loaded {
       opacity: 1;
       visibility: visible;
     }
   }
+`;
+
+export const PaddingWrapper = styled.div`
+  padding: 1rem;
 `;
