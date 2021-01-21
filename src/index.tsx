@@ -4,7 +4,7 @@
  */
 import { StrictMode } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './globalStyles';
+import { GlobalStyles } from './components/Layout/Layout.styles';
 import { App } from './components/App/App';
 import { renderer } from './renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
