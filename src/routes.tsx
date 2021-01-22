@@ -9,6 +9,7 @@ const Projects = lazyImport('Projects');
 const Blog = lazyImport('Blog');
 const About = lazyImport('About');
 const Resume = lazyImport('Resume');
+const Estimate = lazyImport('Estimate');
 const NotFound = lazyImport('NotFound');
 
 export const routes = [
@@ -17,48 +18,48 @@ export const routes = [
     path: '/',
     exact: true,
     children: <Home />,
-    isNavigationDisplay: false,
+    isInNavigationDisplay: false,
   },
   {
     name: 'projects',
     path: '/projects',
     exact: false,
     children: <Projects />,
-    isNavigationDisplay: true,
+    isInNavigationDisplay: true,
   },
   {
     name: 'blog',
     path: '/blog',
     exact: false,
     children: <Blog />,
-    isNavigationDisplay: true,
+    isInNavigationDisplay: true,
   },
   {
     name: 'about',
     path: '/about',
     exact: false,
     children: <About />,
-    isNavigationDisplay: true,
+    isInNavigationDisplay: true,
   },
   {
     name: 'resume',
     path: '/resume',
     exact: false,
     children: <Resume />,
-    isNavigationDisplay: true,
+    isInNavigationDisplay: true,
   },
   {
     name: 'estimate',
     path: '/estimate',
     exact: false,
-    children: <Blog />,
-    isNavigationDisplay: true,
+    children: <Estimate />,
+    isInNavigationDisplay: true,
   },
   {
     name: 'error',
     path: '*',
     exact: false,
     children: <NotFound />,
-    isNavigationDisplay: false,
+    isInNavigationDisplay: false,
   },
 ];
