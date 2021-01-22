@@ -3,6 +3,7 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent, ReactNode } from 'react';
+import { PaddingWrapper } from '../Layout/Layout.styles';
 import { Wrapper } from './Content.styles';
 
 export interface ContentProps {
@@ -10,5 +11,7 @@ export interface ContentProps {
 }
 
 export const Content: FunctionComponent<ContentProps> = ({ children }) => (
-  <Wrapper>{children}</Wrapper>
+  <Wrapper>
+    <PaddingWrapper>{children}</PaddingWrapper>
+  </Wrapper>
 );
