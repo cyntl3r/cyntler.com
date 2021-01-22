@@ -3,12 +3,16 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent } from 'react';
-import { useTitle } from '../../../hooks/useTitle';
 import { useTranslation } from '../../../hooks/useTranslation';
+import { Seo } from '../../Seo/Seo';
 
 export const Resume: FunctionComponent = () => {
   const { t } = useTranslation();
-  useTitle(t('page.resume'));
 
-  return <div>resume</div>;
+  return (
+    <>
+      <Seo title={t('page.resume')} />
+      resume
+    </>
+  );
 };

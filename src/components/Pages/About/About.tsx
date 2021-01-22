@@ -3,10 +3,16 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent } from 'react';
-import { useTitle } from '../../../hooks/useTitle';
+import { useTranslation } from '../../../hooks/useTranslation';
+import { Seo } from '../../Seo/Seo';
 
 export const About: FunctionComponent = () => {
-  useTitle('About');
+  const { t } = useTranslation();
 
-  return <div>about</div>;
+  return (
+    <>
+      <Seo title={t('page.about')} />
+      about
+    </>
+  );
 };
