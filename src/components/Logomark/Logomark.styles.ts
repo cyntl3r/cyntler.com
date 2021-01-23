@@ -4,4 +4,10 @@
  */
 import styled from 'styled-components';
 
-export const Image = styled.img``;
+interface ImageProps {
+  size?: string;
+}
+
+export const Image = styled.img<ImageProps>`
+  user-select: none;
+`;
