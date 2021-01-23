@@ -38,5 +38,5 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const PaddingWrapper = styled.div`
-  padding: 1rem;
+  padding: 2rem;
 `;
