@@ -2,27 +2,31 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
-import { FunctionComponent } from 'react';
+import { FunctionComponent, Suspense, useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { lazyImport } from '../../utils/lazyImport';
+import { IntlProvider } from 'react-intl';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { Content } from '../Content/Content';
+import { LocaleContext } from '../../contexts/localeContext';
+import { routes } from '../../routes';
 
-const Home = lazyImport('Home');
-const NotFound = lazyImport('NotFound');
+export const App: FunctionComponent = () => {
+  const { currentLocale, localeMessages } = useContext(LocaleContext);
 
-export const App: FunctionComponent = () => (
-  <>
-    <Sidebar />
-    <Content>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
-    </Content>
-  </>
-);
+  return (
+    <IntlProvider locale={currentLocale} messages={localeMessages}>
+      <Sidebar />
+      <Content>
+        <Suspense fallback={<div />}>
+          <Switch>
+            {routes.map(({ exact, path, children }) => (
+              <Route key={path} exact={exact} path={path}>
+                {children}
+              </Route>
+            ))}
+          </Switch>
+        </Suspense>
+      </Content>
+    </IntlProvider>
+  );
+};
