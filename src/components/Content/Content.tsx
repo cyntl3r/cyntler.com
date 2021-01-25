@@ -3,7 +3,7 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent, ReactNode } from 'react';
-import { PaddingWrapper } from '../Layout/Layout.styles';
+import { PaddingWrapper } from '../App/App.styles';
 import { Wrapper } from './Content.styles';
 
 export interface ContentProps {

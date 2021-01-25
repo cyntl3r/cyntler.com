@@ -4,8 +4,8 @@
  */
 import { StrictMode } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './components/Layout/Layout.styles';
 import { App } from './components/App/App';
+import { GlobalStyles } from './components/App/App.styles';
 import { renderer } from './renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { LocaleContextProvider } from './contexts/localeContext';
