@@ -1,25 +1,22 @@
+/**
+ * @name personal-frontend
+ * @author cyntler <damian@cyntler.com>
+ */
+import { createContext, FunctionComponent, useMemo, useState } from 'react';
 import {
-  createContext,
-  FunctionComponent,
-  ReactNode,
-  useMemo,
-  useState,
-} from 'react';
-import { LOCALE_STORAGE_KEY } from '../constants';
-import en from '../locales/en.json';
-import pl from '../locales/pl.json';
+  LocaleContextInterface,
+  LocaleContextProviderProps,
+  LocaleType,
+} from './localeContext.types';
+import { LOCALE_STORAGE_KEY } from '../../constants';
 
-export type LocaleContextType = {
-  locales: string[];
-  currentLocale: string;
-  localeMessages: { [key: string]: string };
-  setLocale: (locale: string) => void;
-};
+import en from '../../locales/en.json';
+import pl from '../../locales/pl.json';
 
-export const LocaleContext = createContext<LocaleContextType>(undefined);
+export const LocaleContext = createContext<LocaleContextInterface>(undefined);
 const { Provider } = LocaleContext;
 
-const locales = {
+export const locales = {
   en,
   pl,
 };
@@ -34,10 +31,6 @@ export const getInitialLocale = () => {
   return getLocaleKeys()[0];
 };
 
-export interface LocaleContextProviderProps {
-  children: ReactNode;
-}
-
 export const LocaleContextProvider: FunctionComponent<LocaleContextProviderProps> = ({
   children,
 }) => {
@@ -48,7 +41,7 @@ export const LocaleContextProvider: FunctionComponent<LocaleContextProviderProps
     [currentLocale]
   );
 
-  const setLocale = (locale: string) => {
+  const setLocale = (locale: LocaleType) => {
     setCurrentLocale(locale);
     localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   };
