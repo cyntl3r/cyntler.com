@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -31,9 +32,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body',
+      templateParameters: {
+        title: process.env.APP_TITLE,
+      },
     }),
     new CopyPlugin({
-      patterns: [{ from: join(__dirname, 'public'), to: '.' }],
+      patterns: [{ from: join(__dirname, 'public'), to: './' }],
     }),
     new DotenvPlugin(),
   ],
