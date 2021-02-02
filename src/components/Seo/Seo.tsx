@@ -4,10 +4,7 @@
  */
 import { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
-
-export interface SeoProps {
-  title?: string;
-}
+import { SeoProps } from './Seo.types';
 
 export const Seo: FunctionComponent<SeoProps> = ({ title }) => (
   <Helmet>
