@@ -8,5 +8,16 @@
       }
     ],
     "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ]
   ]
 }
