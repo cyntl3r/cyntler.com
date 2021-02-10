@@ -8,10 +8,10 @@ import {
   LocaleContextProviderProps,
   LocaleType,
 } from './localeContext.types';
-import { LOCALE_STORAGE_KEY } from '../../constants';
+import { LOCALE_STORAGE_KEY } from '~/constants';
 
-import en from '../../locales/en.json';
-import pl from '../../locales/pl.json';
+import en from '~/locales/en.json';
+import pl from '~/locales/pl.json';
 
 export const LocaleContext = createContext<LocaleContextInterface>(undefined);
 const { Provider } = LocaleContext;
