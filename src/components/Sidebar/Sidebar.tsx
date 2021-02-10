@@ -5,7 +5,7 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { PaddingWrapper } from '../App/App.styles';
-import { Logomark } from '../Logomark/Logomark';
+import { Logo } from '../Logo/Logo';
 import { SidebarBio } from './SidebarBio/SidebarBio';
 import { SidebarFooter } from './SidebarFooter/SidebarFooter';
 import { SidebarMobileOpener } from './SidebarMobileOpener/SidebarMobileOpener';
@@ -37,7 +37,7 @@ export const Sidebar: FunctionComponent = () => {
       <Wrapper isActive={isSidebarActive}>
         <PaddingWrapper>
           <Link to="/">
-            <Logomark />
+            <Logo />
           </Link>
           <SidebarBio />
           <SidebarNavigation />
