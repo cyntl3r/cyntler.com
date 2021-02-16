@@ -4,7 +4,7 @@
  */
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { Logomark } from '../../Logomark/Logomark';
+import { Logo } from '../../Logo/Logo';
 
 export const OpenAsideButton = styled.button`
   background: transparent;
@@ -17,7 +17,7 @@ export const OpenAsideButton = styled.button`
   cursor: pointer;
 `;
 
-export const StyledLogomark = styled(Logomark)`
+export const StyledLogomark = styled(Logo)`
   display: block;
   width: 2.4rem;
 `;

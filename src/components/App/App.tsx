@@ -4,9 +4,9 @@
  */
 import { FunctionComponent, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Sidebar } from '../Sidebar/Sidebar';
-import { Content } from '../Content/Content';
-import { routes } from '../../routes';
+import { Sidebar } from '~/components/Sidebar/Sidebar';
+import { Content } from '~/components/Content/Content';
+import { routes } from '~/routes';
 
 export const App: FunctionComponent = () => (
   <>
