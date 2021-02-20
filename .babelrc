@@ -1,22 +1,11 @@
 {
   "presets": [
     "@babel/preset-env",
+    "@babel/preset-typescript",
     [
       "@babel/preset-react",
       {
         "runtime": "automatic"
-      }
-    ],
-    "@babel/preset-typescript"
-  ],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./"],
-        "alias": {
-          "~": "./src"
-        }
       }
     ]
   ]
