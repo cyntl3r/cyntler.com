@@ -1,17 +1,15 @@
-require('dotenv').config();
 const { join } = require('path');
+const dotenv = require('dotenv').config();
+const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const DotenvPlugin = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
-  target: 'web',
-  entry: './src/index.tsx',
+  entry: join(__dirname, '/src/index.tsx'),
   output: {
     path: join(__dirname, '/dist'),
     filename: 'bundle.js',
-    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -26,9 +24,11 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    hot: true,
   },
   plugins: [
+    new DefinePlugin({
+      'process.env': JSON.stringify(dotenv.parsed),
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body',
@@ -39,6 +39,5 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: join(__dirname, 'public'), to: './' }],
     }),
-    new DotenvPlugin(),
   ],
 };
