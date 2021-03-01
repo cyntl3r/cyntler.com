@@ -4,9 +4,9 @@
  */
 import { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
-import { Providers } from '~/components/Providers/Providers';
+import { Providers } from '../components/Providers/Providers';
 
-const Wrapper = ({ children }) => <Providers>{children}</Providers>;
+export const Wrapper = ({ children }) => <Providers>{children}</Providers>;
 
 const customRender = (
   ui: ReactElement,
