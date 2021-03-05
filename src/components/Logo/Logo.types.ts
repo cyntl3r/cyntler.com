@@ -4,8 +4,9 @@
  */
 export interface LogoProps {
   className?: string;
+  size?: number;
 }
 
 export interface LogoImageProps {
-  size?: string;
+  size?: number;
 }
