@@ -3,7 +3,7 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent } from 'react';
-import { useTranslation } from '../../../hooks/useTranslation';
+import { useTranslation } from '../../../hooks/useTranslation/useTranslation';
 import { Wrapper } from './SidebarBio.styles';
 
 export const SidebarBio: FunctionComponent = () => {
