@@ -4,7 +4,7 @@
  */
 import { FunctionComponent, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { PaddingWrapper } from '../App/App.styles';
+import { PaddingWrapper } from '../GlobalStyles/Layout';
 import { Logo } from '../Logo/Logo';
 import { SidebarBio } from './SidebarBio/SidebarBio';
 import { SidebarFooter } from './SidebarFooter/SidebarFooter';
