@@ -6,6 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  target: 'web',
   entry: join(__dirname, '/src/index.tsx'),
   output: {
     path: join(__dirname, '/dist'),
@@ -15,6 +16,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       react: join(__dirname, '/node_modules/react'),
+      'styled-components': join(__dirname, '/node_modules/styled-components'),
     },
   },
   module: {
