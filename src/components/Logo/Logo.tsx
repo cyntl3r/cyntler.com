@@ -16,5 +16,5 @@ export const Logo: FunctionComponent<LogoProps> = ({ size, className }) => (
 );
 
 Logo.defaultProps = {
-  size: 40,
+  size: 4,
 };
