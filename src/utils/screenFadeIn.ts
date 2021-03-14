@@ -6,6 +6,6 @@ export const screenFadeIn = (el: HTMLElement) => {
   window.addEventListener('load', () => {
     setTimeout(() => {
       el.classList.add('loaded');
-    }, 200);
+    }, 500);
   });
 };
