@@ -6,12 +6,12 @@ import { FunctionComponent, StrictMode } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { apolloClient } from '~/apolloClient';
-import { LocaleContextProvider } from '~/contexts/localeContext/localeContext';
-import { theme } from '~/theme';
-import { GlobalStyles } from '~/components/App/App.styles';
+import { apolloClient } from '../../utils/apolloClient';
+import { LocaleContextProvider } from '../../contexts/localeContext/localeContext';
+import { theme } from '../../utils/theme';
 import { IntlProvider } from './IntlProvider/IntlProvider';
 import { ProvidersProps } from './Providers.types';
+import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export const Providers: FunctionComponent<ProvidersProps> = ({ children }) => (
   <StrictMode>
