@@ -28,17 +28,6 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.2rem;
   }
 
-  main {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-
-    &.loaded {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
   h1,
   h2,
   h3,
