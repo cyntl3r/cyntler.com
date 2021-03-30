@@ -5,15 +5,13 @@
 import { renderer } from './utils/renderer';
 import { Providers } from './components/Providers/Providers';
 import { App } from './components/App/App';
-import { screenFadeIn } from './utils/screenFadeIn';
-
-const appElement = document.querySelector('main');
-
-screenFadeIn(appElement);
+import { Coming } from 'react-coming';
 
 renderer(
   <Providers>
-    <App />
+    <Coming toDate="2021-07-01">
+      <App />
+    </Coming>
   </Providers>,
-  appElement
+  document.querySelector('main')
 );
