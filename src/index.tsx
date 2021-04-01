@@ -9,7 +9,7 @@ import { Coming } from 'react-coming';
 
 renderer(
   <Providers>
-    <Coming toDate="2021-07-01">
+    <Coming enabled={process.env.NODE_ENV === 'production'} toDate="2021-07-01">
       <App />
     </Coming>
   </Providers>,
