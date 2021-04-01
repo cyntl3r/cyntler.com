@@ -1,12 +1,10 @@
 {
   "testing_text": "test",
-  "blur_document_title": "Back to Cyntler",
-  "page.home": "Home",
-  "page.projects": "Projekty",
-  "page.blog": "Blog",
-  "page.about": "O mnie",
-  "page.resume": "Résumé",
-  "page.estimate": "Estymacja Projektu",
-  "page.error": "Nie znaleziono",
-  "sidebar.bio": "Programowaniem interesuję się od 12 roku życia. Szybko stało się to moją pasją. W swojej pracy najbardziej lubię to, że tworzę coś dla innych."
+  "home_title": "Home",
+  "projects_title": "Projekty",
+  "blog_title": "Blog",
+  "about_title": "O mnie",
+  "resume_title": "Résumé",
+  "estimate_title": "Estymacja Projektu",
+  "not_found_title": "Nie znaleziono"
 }
