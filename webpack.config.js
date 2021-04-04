@@ -11,13 +11,10 @@ module.exports = {
   output: {
     path: join(__dirname, '/dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
-    alias: {
-      react: join(__dirname, '/node_modules/react'),
-      'styled-components': join(__dirname, '/node_modules/styled-components'),
-    },
   },
   module: {
     rules: [
