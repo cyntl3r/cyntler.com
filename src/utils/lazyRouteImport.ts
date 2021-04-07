@@ -4,7 +4,7 @@
  */
 import { lazy } from 'react';
 
-export const lazyImport = (name: string) =>
+export const lazyRouteImport = (name: string) =>
   lazy(() =>
     import(`../components/Routes/${name}/${name}`).then((module) => ({
       default: module[name],
