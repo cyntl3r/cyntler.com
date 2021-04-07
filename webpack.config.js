@@ -15,6 +15,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      react: join(__dirname, '/node_modules/react'),
+    },
   },
   module: {
     rules: [
@@ -33,7 +36,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      inject: 'body',
+      inject: 'head',
     }),
     new CopyPlugin({
       patterns: [{ from: join(__dirname, 'public'), to: './' }],
