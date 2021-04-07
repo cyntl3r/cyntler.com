@@ -3,10 +3,9 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent, StrictMode } from 'react';
-import { ApolloProvider } from '@apollo/client';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { apolloClient } from '../../utils/apolloClient';
 import { LocaleContextProvider } from '../../contexts/localeContext/localeContext';
 import { theme } from '../../utils/theme';
 import { IntlProvider } from './IntlProvider/IntlProvider';
@@ -15,7 +14,7 @@ import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export const Providers: FunctionComponent<ProvidersProps> = ({ children }) => (
   <StrictMode>
-    <ApolloProvider client={apolloClient}>
+    <HelmetProvider>
       <LocaleContextProvider>
         <Router>
           <IntlProvider>
@@ -26,6 +25,6 @@ export const Providers: FunctionComponent<ProvidersProps> = ({ children }) => (
           </IntlProvider>
         </Router>
       </LocaleContextProvider>
-    </ApolloProvider>
+    </HelmetProvider>
   </StrictMode>
 );
