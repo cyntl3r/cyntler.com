@@ -2,15 +2,15 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
-import { lazyImport } from '../utils/lazyImport';
+import { lazyRouteImport } from '../utils/lazyRouteImport';
 
-const Home = lazyImport('Home');
-const Projects = lazyImport('Projects');
-const Blog = lazyImport('Blog');
-const About = lazyImport('About');
-const Resume = lazyImport('Resume');
-const Estimate = lazyImport('Estimate');
-const NotFound = lazyImport('NotFound');
+const Home = lazyRouteImport('Home');
+const Projects = lazyRouteImport('Projects');
+const Blog = lazyRouteImport('Blog');
+const About = lazyRouteImport('About');
+const Resume = lazyRouteImport('Resume');
+const Estimate = lazyRouteImport('Estimate');
+const NotFound = lazyRouteImport('NotFound');
 
 export const routes = [
   {
