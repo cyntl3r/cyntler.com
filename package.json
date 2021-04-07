@@ -44,23 +44,21 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.13",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
-    "graphql": "^15.5.0",
+    "axios": "^0.21.1",
     "react": "^17.0.2",
-    "react-coming": "^1.0.0-alpha.3",
+    "react-coming": "^1.0.3",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.0.9",
     "react-icons": "^4.2.0",
     "react-intl": "^5.13.5",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
-    "styled-media-query": "^2.1.2",
-    "use-window-blur-change-title": "^1.0.3"
+    "styled-media-query": "^2.1.2"
   },
   "reactSnap": {
     "source": "dist"
