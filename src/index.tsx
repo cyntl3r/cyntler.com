@@ -8,10 +8,10 @@ import { App } from './components/App/App';
 import { Coming } from 'react-coming';
 
 renderer(
-  <Providers>
-    <Coming enabled={process.env.NODE_ENV === 'production'} toDate="2021-07-01">
+  <Coming toDate="2021-07-01" enabled={process.env.NODE_ENV === 'production'}>
+    <Providers>
       <App />
-    </Coming>
-  </Providers>,
+    </Providers>
+  </Coming>,
   document.querySelector('main')
 );
