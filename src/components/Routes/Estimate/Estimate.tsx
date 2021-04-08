@@ -11,7 +11,7 @@ export const Estimate: FunctionComponent = () => {
 
   return (
     <>
-      <Seo title={t('page.estimate')} />
+      <Seo title={t('estimate_title')} />
       estimate
     </>
   );

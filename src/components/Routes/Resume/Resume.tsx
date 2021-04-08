@@ -11,7 +11,7 @@ export const Resume: FunctionComponent = () => {
 
   return (
     <>
-      <Seo title={t('page.resume')} />
+      <Seo title={t('resume_title')} />
       resume
     </>
   );

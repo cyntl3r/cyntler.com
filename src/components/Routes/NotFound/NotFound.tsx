@@ -11,7 +11,7 @@ export const NotFound: FunctionComponent = () => {
 
   return (
     <>
-      <Seo title={t('page.home')} />
+      <Seo title={t('not_found_title')} />
       not found
     </>
   );

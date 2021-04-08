@@ -11,8 +11,8 @@ export const Projects: FunctionComponent = () => {
 
   return (
     <>
-      <Seo title={t('page.projects')} />
-      home
+      <Seo title={t('projects_title')} />
+      projects
     </>
   );
 };

@@ -11,7 +11,7 @@ export const About: FunctionComponent = () => {
 
   return (
     <>
-      <Seo title={t('page.about')} />
+      <Seo title={t('about_title')} />
       about
     </>
   );
