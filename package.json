@@ -10,7 +10,7 @@
   "author": "cyntler",
   "scripts": {
     "start": "webpack serve --open",
-    "build": "rimraf dist && webpack --config webpack.config.production.js && react-snap",
+    "build": "rimraf dist && webpack --config webpack.config.production.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "check-types": "tsc --noEmit",
