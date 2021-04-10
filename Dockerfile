@@ -1,7 +1,9 @@
 FROM node:alpine as builder
 WORKDIR /app
 COPY ./ ./
-RUN npm install puppeteer --unsafe-perm=true --allow-root
+RUN apk add -U --no-cache --allow-untrusted udev ttf-freefont chromium git
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV CHROMIUM_PATH /usr/bin/chromium-browser
 RUN npm i && npm run build
 
 FROM nginx:alpine

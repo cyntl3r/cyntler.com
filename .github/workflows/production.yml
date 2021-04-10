@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install modules
+        run: npm install
+
       - name: Check / Prettier
         run: npm run prettier
 
@@ -23,6 +26,7 @@ jobs:
         run: npm run test
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
