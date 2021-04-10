@@ -3,7 +3,7 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { SeoProps } from './Seo.types';
 
 export const Seo: FunctionComponent<SeoProps> = ({
