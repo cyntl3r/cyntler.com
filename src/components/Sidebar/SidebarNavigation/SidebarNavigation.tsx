@@ -16,7 +16,7 @@ export const SidebarNavigation: FunctionComponent = () => {
         .filter(({ isInNavigationDisplay }) => isInNavigationDisplay)
         .map(({ path, name }) => (
           <StyledLink key={path} to={path}>
-            {t(`page.${name}`)}
+            {t(`${name}_title`)}
           </StyledLink>
         ))}
     </Wrapper>
