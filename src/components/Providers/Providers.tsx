@@ -3,7 +3,6 @@
  * @author cyntler <damian@cyntler.com>
  */
 import { FunctionComponent, StrictMode } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { LocaleContextProvider } from '../../contexts/localeContext/localeContext';
@@ -14,17 +13,15 @@ import { GlobalStyles } from '../GlobalStyles/GlobalStyles';
 
 export const Providers: FunctionComponent<ProvidersProps> = ({ children }) => (
   <StrictMode>
-    <HelmetProvider>
-      <LocaleContextProvider>
-        <Router>
-          <IntlProvider>
-            <ThemeProvider theme={theme}>
-              <GlobalStyles />
-              {children}
-            </ThemeProvider>
-          </IntlProvider>
-        </Router>
-      </LocaleContextProvider>
-    </HelmetProvider>
+    <LocaleContextProvider>
+      <Router>
+        <IntlProvider>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            {children}
+          </ThemeProvider>
+        </IntlProvider>
+      </Router>
+    </LocaleContextProvider>
   </StrictMode>
 );
