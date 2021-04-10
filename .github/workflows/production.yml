@@ -26,6 +26,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           script: |
-            cd /personal-frontend
+            cd /var/personal-frontend
             docker build . -t personal-frontend
             docker run personal-frontend -p 80:80 --always
