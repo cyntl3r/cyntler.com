@@ -45,5 +45,5 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd /var/personal-frontend
-            docker build . -t personal-frontend
-            docker run personal-frontend -p 80:80 --always
+            docker build -t personal-frontend .
+            docker run -it -d -p 80:80 personal-frontend
