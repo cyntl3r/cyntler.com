@@ -45,6 +45,7 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd /var/personal-frontend
-            docker stop personal-frontend
             docker build --no-cache -t personal-frontend .
+            docker stop personal-frontend
+            docker remove personal-frontend
             docker run --name personal-frontend -it -d -p 80:80 -v /etc/letsencrypt/live/cyntler.com:/etc/letsencrypt/live/cyntler.com personal-frontend
