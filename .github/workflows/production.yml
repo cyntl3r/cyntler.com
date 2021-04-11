@@ -46,8 +46,5 @@ jobs:
           script: |
             cd /var/personal-frontend
             docker build --no-cache -t personal-frontend .
-            docker stop personal-frontend
             docker rm personal-frontend
-            docker create --name personal-frontend -it personal-frontend
-            docker cp /etc/letsencrypt/live/cyntler.com personal-frontend:/etc/letsencrypt/live/cyntler.com
-            docker run -p 80:80 personal-frontend
+            docker run -p 80:80 -v /etc/letsencrypt/live/cyntler.com:/ssl personal-frontend
