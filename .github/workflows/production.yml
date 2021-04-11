@@ -47,4 +47,4 @@ jobs:
             cd /var/personal-frontend
             docker build --no-cache -t personal-frontend .
             docker rm personal-frontend
-            docker run -p 80:80 personal-frontend
+            docker run -p 80:80 -v /etc/letsencrypt/live/cyntler.com/fullchain.pem:/ssl/fullchain.pem -v /etc/letsencrypt/live/cyntler.com/privkey.pem:/ssl/privkey.pem personal-frontend
