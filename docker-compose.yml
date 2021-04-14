@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  personal-frontend:
+    build: .
+    container_name: personal-frontend
+    volumes:
+      - app-data:/app/dist
+
+  http-server:
+    depends_on:
+      - personal-frontend
+    image: nginx:alpine
+    container_name: http-server
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/live/cyntler.com/fullchain.pem:/ssl/fullchain.pem
+      - /etc/letsencrypt/live/cyntler.com/privkey.pem:/ssl/privkey.pem
+      - app-data:/usr/share/nginx/html
+volumes:
+  app-data:
