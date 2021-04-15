@@ -7,8 +7,10 @@ import { Providers } from './components/Providers/Providers';
 import { App } from './components/App/App';
 import { Coming } from 'react-coming';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 renderer(
-  <Coming toDate="2021-07-01" enabled={process.env.NODE_ENV === 'production'}>
+  <Coming enabled={isProduction} toDate="2021-07-01">
     <Providers>
       <App />
     </Providers>
