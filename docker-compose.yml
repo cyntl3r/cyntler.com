@@ -5,7 +5,6 @@ services:
     container_name: personal-frontend
     volumes:
       - app-data:/app/dist
-
   http-server:
     depends_on:
       - personal-frontend
