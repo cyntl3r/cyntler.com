@@ -13,10 +13,10 @@ services:
     expose:
       - 80
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
       - app-data:/usr/share/nginx/html
 volumes:
   app-data:
 networks:
   default:
-    name: nginx-proxy
+    external:
+      name: nginx-proxy
