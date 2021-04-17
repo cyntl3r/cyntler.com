@@ -12,6 +12,7 @@ services:
       - VIRTUAL_HOST=cyntler.com,www.cyntler.com
     expose:
       - 80
+      - 443
     volumes:
       - app-data:/usr/share/nginx/html
 volumes:
