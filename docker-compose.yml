@@ -1,23 +1,32 @@
 version: '3'
+
 services:
   app:
     build: .
     volumes:
       - app-data:/app/dist
+
   http-server:
     depends_on:
       - app
     image: nginx:alpine
     environment:
       - VIRTUAL_HOST=cyntler.com,www.cyntler.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=cyntler.com,www.cyntler.com
+      - LETSENCRYPT_EMAIL=damian@cyntler.com
     expose:
       - 80
-      - 443
     volumes:
       - app-data:/usr/share/nginx/html
+    networks:
+      - proxy
+    restart: unless-stopped
+
 volumes:
   app-data:
+
 networks:
-  default:
+  proxy:
     external:
       name: nginx-proxy
