@@ -4,9 +4,9 @@
  */
 import { lazy } from 'react';
 
-export const lazyRouteImport = (name: string) =>
+export const lazyPageImport = (name: string) =>
   lazy(() =>
-    import(`../components/Routes/${name}/${name}`).then((module) => ({
+    import(`../components/Pages/${name}/${name}`).then((module) => ({
       default: module[name],
     }))
   );
