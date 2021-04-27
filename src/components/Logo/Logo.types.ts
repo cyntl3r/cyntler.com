@@ -5,6 +5,7 @@
 export interface LogoProps {
   className?: string;
   size?: number;
+  href?: string;
 }
 
 export interface LogoImageProps {
