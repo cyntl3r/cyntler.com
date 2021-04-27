@@ -2,64 +2,64 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
-import { lazyRouteImport } from '../utils/lazyRouteImport';
+import { lazyPageImport } from './utils/lazyPageImport';
 
-const Home = lazyRouteImport('Home');
-const Projects = lazyRouteImport('Projects');
-const Blog = lazyRouteImport('Blog');
-const About = lazyRouteImport('About');
-const Resume = lazyRouteImport('Resume');
-const Estimate = lazyRouteImport('Estimate');
-const NotFound = lazyRouteImport('NotFound');
+const Home = lazyPageImport('Home');
+const ProjectList = lazyPageImport('ProjectList');
+const Blog = lazyPageImport('Blog');
+const AboutMe = lazyPageImport('AboutMe');
+const Resume = lazyPageImport('Resume');
+const EstimateForm = lazyPageImport('EstimateForm');
+const NotFound = lazyPageImport('NotFound');
 
 export const routes = [
   {
     name: 'home',
     path: '/',
     exact: true,
-    children: <Home />,
+    component: Home,
     isInNavigationDisplay: false,
   },
   {
     name: 'projects',
     path: '/projects',
     exact: false,
-    children: <Projects />,
+    component: ProjectList,
     isInNavigationDisplay: true,
   },
   {
     name: 'blog',
     path: '/blog',
     exact: false,
-    children: <Blog />,
+    component: Blog,
     isInNavigationDisplay: true,
   },
   {
     name: 'about',
     path: '/about',
     exact: false,
-    children: <About />,
+    component: AboutMe,
     isInNavigationDisplay: true,
   },
   {
     name: 'resume',
     path: '/resume',
     exact: false,
-    children: <Resume />,
+    component: Resume,
     isInNavigationDisplay: true,
   },
   {
     name: 'estimate',
     path: '/estimate',
     exact: false,
-    children: <Estimate />,
+    component: EstimateForm,
     isInNavigationDisplay: true,
   },
   {
     name: 'error',
     path: '*',
     exact: false,
-    children: <NotFound />,
+    component: NotFound,
     isInNavigationDisplay: false,
   },
 ];
