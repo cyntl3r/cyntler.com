@@ -4,17 +4,17 @@
  */
 import { FunctionComponent, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Sidebar } from '../Sidebar/Sidebar';
-import { routes } from '../routes';
+import { routes } from '../../routes';
+import { MobileHeader } from '../MobileHeader/MobileHeader';
 
 export const App: FunctionComponent = () => (
   <>
-    <Sidebar />
+    <MobileHeader />
     <Suspense fallback={null}>
       <Switch>
-        {routes.map(({ path, exact, children }) => (
+        {routes.map(({ path, exact, component: RouteComponent }) => (
           <Route key={path} path={path} exact={exact}>
-            {children}
+            <RouteComponent />
           </Route>
         ))}
       </Switch>
