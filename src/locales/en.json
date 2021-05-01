@@ -1,10 +1,10 @@
 {
   "testing_text": "test",
   "home_title": "Home",
-  "projects_title": "Projects",
+  "project_list_title": "Projects",
   "blog_title": "Blog",
-  "about_title": "About me",
+  "about_me_title": "About me",
   "resume_title": "Résumé",
-  "estimate_title": "Estimate project",
+  "estimate_form_title": "Estimate project",
   "not_found_title": "Not found"
 }
