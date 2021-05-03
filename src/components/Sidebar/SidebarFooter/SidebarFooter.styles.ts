@@ -4,12 +4,21 @@
  */
 import styled from 'styled-components';
 
-export const TextLine = styled.p`
-  margin: 0;
+export const SidebarFooterContainer = styled.footer``;
+
+export const SidebarFooterText = styled.p`
+  text-align: right;
   color: #a2a2a2;
-  font-size: 1.3rem;
+  font-size: 0.7rem;
 `;
 
-export const Wrapper = styled.div`
-  margin: 1rem 0 0 0;
+export const SidebarFooterSocialContainer = styled.div`
+  text-align: right;
+  margin-top: 14px;
+`;
+
+export const SidebarFooterSocialLink = styled.a`
+  color: #a2a2a2;
+  margin-left: 7px;
+  font-size: 0.85rem;
 `;

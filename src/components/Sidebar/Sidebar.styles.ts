@@ -2,31 +2,23 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
-import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components';
+import { mediaScreenMin } from '../../utils/mediaScreen';
 
-interface WrapperProps {
-  isActive: boolean;
-}
+export const SidebarContainer = styled.aside`
+  display: none;
 
-export const Wrapper = styled.aside<WrapperProps>`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: -100vw;
-  top: 0;
-  font-size: 1.5rem;
-  background-color: ${({ theme }) => theme?.colors?.white};
-  transition: left 0.5s ease;
-
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      left: 0;
-    `}
-
-  ${media.greaterThan('medium')`
-    width: 320px;
+  ${mediaScreenMin('medium')} {
+    position: fixed;
     left: 0;
-  `}
+    top: 0;
+    width: 20%;
+    min-width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-left: 40px;
+  }
 `;

@@ -2,22 +2,31 @@
  * @name personal-frontend
  * @author cyntler <damian@cyntler.com>
  */
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-export const StyledLink = styled(Link)`
-  color: #000000;
-  text-decoration: none;
-  font-size: 1.7rem;
-  display: inline-block;
-  margin-bottom: 1rem;
-  &:last-child {
-    margin-bottom: 0;
-  }
+export const SidebarNavigationContainer = styled.nav`
+  margin: 30px 0;
+  text-align: right;
 `;
 
-export const Wrapper = styled.nav`
-  margin: 2.5rem 0 0 0;
-  display: flex;
-  flex-direction: column;
+export const SidebarNavigationLink = styled(NavLink)`
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid transparent;
+  position: relative;
+
+  &.active {
+    &::after {
+      content: '->';
+      position: absolute;
+      right: -20px;
+      top: 0;
+    }
+  }
 `;
