@@ -21,7 +21,7 @@ export const routes = [
     isInNavigationDisplay: false,
   },
   {
-    name: 'projects',
+    name: 'project_list',
     path: '/projects',
     exact: false,
     component: ProjectList,
@@ -35,7 +35,7 @@ export const routes = [
     isInNavigationDisplay: true,
   },
   {
-    name: 'about',
+    name: 'about_me',
     path: '/about',
     exact: false,
     component: AboutMe,
@@ -49,14 +49,14 @@ export const routes = [
     isInNavigationDisplay: true,
   },
   {
-    name: 'estimate',
+    name: 'estimate_form',
     path: '/estimate',
     exact: false,
     component: EstimateForm,
     isInNavigationDisplay: true,
   },
   {
-    name: 'error',
+    name: 'not_found',
     path: '*',
     exact: false,
     component: NotFound,
