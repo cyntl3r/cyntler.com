@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme?.colors?.white};
     font-family: 'Lato', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   h1,
