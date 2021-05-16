@@ -7,10 +7,10 @@ import { mediaScreenMin } from '../../utils/mediaScreen';
 
 export const AppPageContainer = styled.div`
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 1.6rem;
 
   ${mediaScreenMin('medium')} {
-    min-height: 500px;
-    padding: 50px 120px 50px 350px;
+    min-height: 50rem;
+    padding: 5rem 12rem 5rem 35rem;
   }
 `;
