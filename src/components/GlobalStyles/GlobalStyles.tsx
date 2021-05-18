@@ -19,13 +19,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: 100%;
+    font-size: 62.5%;
   }
 
   body {
     background-color: ${({ theme }) => theme?.colors?.white};
     font-family: 'Lato', sans-serif;
-    font-size: 0.78rem;
+    font-size: 1.2rem;
   }
 
   h1,
