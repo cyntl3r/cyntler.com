@@ -9,7 +9,7 @@ import { LogoProps } from './Logo.types';
 
 export const Logo: FunctionComponent<LogoProps> = ({
   className,
-  size = 2,
+  size = 2.7,
   href = '/',
 }) => (
   <Link to={href}>
